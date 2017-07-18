@@ -41,7 +41,7 @@ var Kanpress = {};
 		//$( '.tasks-area' ).css( 'min-height', height + 'px' );
 
 		//All .tasks-area must have the same height
-		/** @todo Revisar si esto es necesario... quizá se puede asignar height a todas directamente */
+		/** @todo Revisar si esto es necesario... quizÃ¡ se puede asignar height a todas directamente */
 		var tallest = 0;
 		columns = $( '.tasks-area' );
 		for ( i in columns ) {
@@ -54,7 +54,7 @@ var Kanpress = {};
 
 		//Responsive layout
 		if ( $( window ).width() < 700) {
-				/** @todo Cambiar <h3> "artículos planteados" => "planteados", "pendiente de revisión"=>"pendiente" */
+				/** @todo Cambiar <h3> "artÃ­culos planteados" => "planteados", "pendiente de revisiÃ³n"=>"pendiente" */
 				$( '.wrap' ).addClass( 'responsive-pq' );
 		} else {
 				$( '.wrap' ).removeClass( 'responsive-pq' );
@@ -66,7 +66,7 @@ var Kanpress = {};
 		* Task counter on top of each column
 		*/
 	Kanpress.countTasks = function() {
-		$( '#col1, #col2, #col3' ).each(function( n, columna ) {
+		$( '#col1, #col2, #col3, #col4, #col5' ).each(function( n, columna ) {
 			var $tasks = $( columna ).find( '.tarea' ).length;
 			$( columna ).find( 'h3 span' ).html( '(' + $tasks + ')' );
 		} );
@@ -76,8 +76,8 @@ var Kanpress = {};
 	/**
 		* Show the new task form pop-up
 		*
-		* Si el argumento noVaciarFormulario es true, se mantiene y no se vacía. Si es
-		* cualquier otro valor, o no se pasa, se vaciará el formulario.
+		* Si el argumento noVaciarFormulario es true, se mantiene y no se vacÃ­a. Si es
+		* cualquier otro valor, o no se pasa, se vaciarÃ¡ el formulario.
 		*/
 	Kanpress.showPopupNewTask = function( noVaciarFormulario ) {
 
@@ -299,7 +299,7 @@ var Kanpress = {};
 			'user': userId
 		};
 
-		/** @todo Cambiar AJAX + reload por envío de formulario normal */
+		/** @todo Cambiar AJAX + reload por envÃ­o de formulario normal */
 		$.ajax({
 			type		: 'POST',
 			url			: KanpressData.baseUrl + '/ajax_assign_task.php',
